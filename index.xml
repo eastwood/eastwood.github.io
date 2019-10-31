@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>System 2</title>
+    <link>http://system2.io/</link>
+    <description>Recent content on System 2</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2019 — Clint Ryan</copyright>
+    <lastBuildDate>Fri, 01 Jul 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://system2.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Debugging in ES6</title>
+      <link>http://system2.io/2016/07/debugging-in-es6/</link>
+      <pubDate>Fri, 01 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://system2.io/2016/07/debugging-in-es6/</guid>
+      <description>In the advent of ES6 and transpilers, writing clean and concise javascript has never been so easy and kind on the soul. However, using a compiler presents some challenges when it comes to debugging, namely in relation to mapping the source code to the compiled output. Fortunately, this isn&amp;rsquo;t a new problem and has been solved for plenty of other compilers. In this post, we&amp;rsquo;ll focus on javascript&amp;rsquo;s most popular compiler, babel and the tools to use to enable this.</description>
+    </item>
+    
+    <item>
+      <title>An introduction to spacemacs</title>
+      <link>http://system2.io/2016/06/an-introduction-to-spacemacs/</link>
+      <pubDate>Mon, 27 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://system2.io/2016/06/an-introduction-to-spacemacs/</guid>
+      <description>One of my joys as a developer is investing time tweaking and editing my own development tools. Not only is this therapeutic, but I get a buzz out of improving the efficacy of my work. Recently I have been delving into the emacs community to see how the other side do it. After some experimentation, I wasn&amp;rsquo;t really impressed and felt orders of magnitude slower than my current setup; then I found spacemacs.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://system2.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://system2.io/about/</guid>
+      <description>Purpose I&amp;rsquo;ve found that my natural inclination is to develop a general knowledge of a topic, without truly mastering it. This blog is my remedy for that, an attempt to apply the system2 of my brain in order to explore tech in enough detail that I can write and teach it. This blog will serve as a braindump of ideas, problems, experiences and philosophy.
+Discourse I&amp;rsquo;m an advocate for open discourse and critical thinking and constructive criticism.</description>
+    </item>
+    
+    <item>
+      <title>Random</title>
+      <link>http://system2.io/random/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://system2.io/random/</guid>
+      <description>Dumping ground of disposable, shareable snippets</description>
+    </item>
+    
+  </channel>
+</rss>

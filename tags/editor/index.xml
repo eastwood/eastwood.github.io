@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Editor on System 2</title>
+    <link>http://system2.io/tags/editor/</link>
+    <description>Recent content in Editor on System 2</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2019 — Clint Ryan</copyright>
+    <lastBuildDate>Mon, 27 Jun 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://system2.io/tags/editor/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An introduction to spacemacs</title>
+      <link>http://system2.io/2016/06/an-introduction-to-spacemacs/</link>
+      <pubDate>Mon, 27 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://system2.io/2016/06/an-introduction-to-spacemacs/</guid>
+      <description>One of my joys as a developer is investing time tweaking and editing my own development tools. Not only is this therapeutic, but I get a buzz out of improving the efficacy of my work. Recently I have been delving into the emacs community to see how the other side do it. After some experimentation, I wasn&amp;rsquo;t really impressed and felt orders of magnitude slower than my current setup; then I found spacemacs.</description>
+    </item>
+    
+  </channel>
+</rss>
