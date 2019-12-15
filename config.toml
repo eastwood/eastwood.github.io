@@ -1,0 +1,12 @@
+baseURL = "https://system2.io"
+languageCode = "en-us"
+title = "System2"
+theme = "hugo-theme-air"
+
+[author]
+  name = "eastwood"
+
+[params]
+  description = "The brain dump of a lazy developer"
+  logo = ""
+  hideHUGOSupport = true
