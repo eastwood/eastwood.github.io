@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>System2</title>
+    <link>https://system2.io/</link>
+    <description>Recent content on System2</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://system2.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mythic Secret Santa</title>
+      <link>https://system2.io/secret-santa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://system2.io/secret-santa/</guid>
+      <description>Christmas is upon us! I&#39;ve decided to run a little secret santa for my WOW guild. The rules are pretty simple:
+ Minimum spend of 20g My character &amp;ldquo;mythicsanta&amp;rdquo; will contact each of the participants with the name of whom they&#39;ll be Santa for Each participant will send &amp;ldquo;mythicsanta&amp;rdquo; the gift before the 22nd December On christmas, I&#39;ll proxy the gifts through to each of the recipients as &amp;ldquo;Santa&amp;rdquo;. I will not be participating because I don&#39;t want to be biased and I need to be the sole orchestrator to not ruin the magic.</description>
+    </item>
+    
+  </channel>
+</rss>
