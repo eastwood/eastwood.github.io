@@ -1,1 +1,19 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+<script>
+  Math.seedrandom("Mythic Secret Santa Seed, love Xanic");
+  players = ["Bicboi", "AmeliaRose", "Epoch", "AtomicBoogie", "lightofsin", "Scorcia", "Jooju", "Liltiddies", "Tremendous", "HoneyBadger",
+    "BnK",
+    "Lam Broll",
+    "Roliviane",
+    "Pokeadot",
+    "Umbral",
+    "MiniKoala"
+  ];
+
+  randomly_sorted = players.sort((a, b) => 0.5 - Math.random());
+
+  console.log("Secret santa list:\n");
+  for (let i = 0; i < randomly_sorted.length; i++) {
+    console.log(`${randomly_sorted[i]} => ${randomly_sorted[(i+1) % randomly_sorted.length]}`);
+  }
+</script>

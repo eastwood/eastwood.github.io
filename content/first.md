@@ -62,15 +62,33 @@ players = [
 randomly_sorted = players.sort((a, b) => 0.5 - Math.random());
 
 console.log("Secret santa list:\n");
-randomly_sorted.forEach(p => {
-  console.log(p);
-});
+for (let i = 0; i < randomly_sorted.length; i++) {
+  console.log(`${randomly_sorted[i]} => ${randomly_sorted[(i+1) % randomly_sorted.length]}`);
+}
 ```
 
 The output of this (again, you can verify this in the console on this page) is:
 
 ```javascript
-Epoch -> AmeliaRose -> Bicboi -> MiniKoala -> BnK -> HoneyBadger -> AtomicBoogie -> Pokeadot -> Liltiddies -> lightofsin -> Umbral -> Tremendous -> Scorcia -> Jooju -> Lam Broll -> Roliviane -> Epoch
+Secret santa list:
+
+(index):131 Epoch => AmeliaRose
+(index):131 AmeliaRose => Bicboi
+(index):131 Bicboi => MiniKoala
+(index):131 MiniKoala => BnK
+(index):131 BnK => HoneyBadger
+(index):131 HoneyBadger => AtomicBoogie
+(index):131 AtomicBoogie => Pokeadot
+(index):131 Pokeadot => Liltiddies
+(index):131 Liltiddies => lightofsin
+(index):131 lightofsin => Umbral
+(index):131 Umbral => Tremendous
+(index):131 Tremendous => Scorcia
+(index):131 Scorcia => Jooju
+(index):131 Jooju => Lam Broll
+(index):131 Lam Broll => Roliviane
+(index):131 Roliviane => Epoch
+
 ```
 
 Where `x -> y` means `x` is `y's` santa. As an example, `Epoch` gives Amelia a gift, and Amelia gives `Bicboi` a gift etc.
