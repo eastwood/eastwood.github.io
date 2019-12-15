@@ -124,6 +124,24 @@
 <li>MiniKoala</li>
 </ul>
 <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+<script>
+  Math.seedrandom("Mythic Secret Santa Seed, love Xanic");
+  players = ["Bicboi", "AmeliaRose", "Epoch", "AtomicBoogie", "lightofsin", "Scorcia", "Jooju", "Liltiddies", "Tremendous", "HoneyBadger",
+    "BnK",
+    "Lam Broll",
+    "Roliviane",
+    "Pokeadot",
+    "Umbral",
+    "MiniKoala"
+  ];
+
+  randomly_sorted = players.sort((a, b) => 0.5 - Math.random());
+
+  console.log("Secret santa list:\n");
+  for (let i = 0; i < randomly_sorted.length; i++) {
+    console.log(`${randomly_sorted[i]} => ${randomly_sorted[(i+1) % randomly_sorted.length]}`);
+  }
+</script>
 <h3 id="secret-santa-algorithm-verifiable-for-later">Secret Santa Algorithm (verifiable for later)</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">Math.<span style="color:#a6e22e">seedrandom</span>(<span style="color:#e6db74">&#34;Mythic Secret Santa Seed, love Xanic&#34;</span>);
 
@@ -148,11 +166,29 @@
 <span style="color:#a6e22e">randomly_sorted</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">players</span>.<span style="color:#a6e22e">sort</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#ae81ff">0.5</span> <span style="color:#f92672">-</span> Math.<span style="color:#a6e22e">random</span>());
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Secret santa list:\n&#34;</span>);
-<span style="color:#a6e22e">randomly_sorted</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">p</span> =&gt; {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">p</span>);
-});
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">randomly_sorted</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">randomly_sorted</span>[<span style="color:#a6e22e">i</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74"> =&gt; </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">randomly_sorted</span>[(<span style="color:#a6e22e">i</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> <span style="color:#a6e22e">randomly_sorted</span>.<span style="color:#a6e22e">length</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+}
 </code></pre></div><p>The output of this (again, you can verify this in the console on this page) is:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">Epoch</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">AmeliaRose</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">Bicboi</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">MiniKoala</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">BnK</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">HoneyBadger</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">AtomicBoogie</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">Pokeadot</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">Liltiddies</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">lightofsin</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">Umbral</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">Tremendous</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">Scorcia</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">Jooju</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">Lam</span> <span style="color:#a6e22e">Broll</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">Roliviane</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">Epoch</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">Secret</span> <span style="color:#a6e22e">santa</span> <span style="color:#a6e22e">list</span><span style="color:#f92672">:</span>
+
+(<span style="color:#a6e22e">index</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">131</span> <span style="color:#a6e22e">Epoch</span> =&gt; <span style="color:#a6e22e">AmeliaRose</span>
+(<span style="color:#a6e22e">index</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">131</span> <span style="color:#a6e22e">AmeliaRose</span> =&gt; <span style="color:#a6e22e">Bicboi</span>
+(<span style="color:#a6e22e">index</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">131</span> <span style="color:#a6e22e">Bicboi</span> =&gt; <span style="color:#a6e22e">MiniKoala</span>
+(<span style="color:#a6e22e">index</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">131</span> <span style="color:#a6e22e">MiniKoala</span> =&gt; <span style="color:#a6e22e">BnK</span>
+(<span style="color:#a6e22e">index</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">131</span> <span style="color:#a6e22e">BnK</span> =&gt; <span style="color:#a6e22e">HoneyBadger</span>
+(<span style="color:#a6e22e">index</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">131</span> <span style="color:#a6e22e">HoneyBadger</span> =&gt; <span style="color:#a6e22e">AtomicBoogie</span>
+(<span style="color:#a6e22e">index</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">131</span> <span style="color:#a6e22e">AtomicBoogie</span> =&gt; <span style="color:#a6e22e">Pokeadot</span>
+(<span style="color:#a6e22e">index</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">131</span> <span style="color:#a6e22e">Pokeadot</span> =&gt; <span style="color:#a6e22e">Liltiddies</span>
+(<span style="color:#a6e22e">index</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">131</span> <span style="color:#a6e22e">Liltiddies</span> =&gt; <span style="color:#a6e22e">lightofsin</span>
+(<span style="color:#a6e22e">index</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">131</span> <span style="color:#a6e22e">lightofsin</span> =&gt; <span style="color:#a6e22e">Umbral</span>
+(<span style="color:#a6e22e">index</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">131</span> <span style="color:#a6e22e">Umbral</span> =&gt; <span style="color:#a6e22e">Tremendous</span>
+(<span style="color:#a6e22e">index</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">131</span> <span style="color:#a6e22e">Tremendous</span> =&gt; <span style="color:#a6e22e">Scorcia</span>
+(<span style="color:#a6e22e">index</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">131</span> <span style="color:#a6e22e">Scorcia</span> =&gt; <span style="color:#a6e22e">Jooju</span>
+(<span style="color:#a6e22e">index</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">131</span> <span style="color:#a6e22e">Jooju</span> =&gt; <span style="color:#a6e22e">Lam</span> <span style="color:#a6e22e">Broll</span>
+(<span style="color:#a6e22e">index</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">131</span> <span style="color:#a6e22e">Lam</span> <span style="color:#a6e22e">Broll</span> =&gt; <span style="color:#a6e22e">Roliviane</span>
+(<span style="color:#a6e22e">index</span>)<span style="color:#f92672">:</span><span style="color:#ae81ff">131</span> <span style="color:#a6e22e">Roliviane</span> =&gt; <span style="color:#a6e22e">Epoch</span>
+
 </code></pre></div><p>Where <code>x -&gt; y</code> means <code>x</code> is <code>y's</code> santa. As an example, <code>Epoch</code> gives Amelia a gift, and Amelia gives <code>Bicboi</code> a gift etc.</p>
 
           </section>
