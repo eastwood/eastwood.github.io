@@ -4,6 +4,7 @@ comments = false
 draft = false
 slug = "secret-santa"
 title= "Mythic Secret Santa"
+date = 2019-12-16
 +++
 
 Christmas is upon us! I've decided to run a little secret santa for my WOW guild. The rules are pretty simple:

@@ -1,4 +1,4 @@
-baseURL = "https://system2.io"
+baseURL = "https://system2.io/"
 languageCode = "en-us"
 title = "System2"
 theme = "hugo-theme-air"
@@ -8,5 +8,6 @@ theme = "hugo-theme-air"
 
 [params]
   description = "The brain dump of a lazy developer"
+  author = "eastwd"
   logo = ""
   hideHUGOSupport = true
