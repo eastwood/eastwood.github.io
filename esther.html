@@ -35,6 +35,24 @@
         .text-center {
             text-align: center;
         }
+
+        .potato {
+            animation: fall-spin 5s ease-in-out forwards;
+            height: 50px;
+            width: 50px;
+            opacity: 0;
+            position: absolute
+        }
+        @keyframes fall-spin {
+            0% {
+                transform: translateY(-100%) rotate(0deg);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(calc(100vh + 100px)) rotate(360deg);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -43,4 +61,3 @@
     <div id="game"></div>
     <script src="./irish-game.js"></script>
 </body>
-</html>

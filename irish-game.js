@@ -16,6 +16,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const gameContainer = document.getElementById("game");
     const h2 = document.querySelector("h2");
+    const body = document.querySelector("body");
+
+    function createPotatoShower() {
+        for (let i = 0; i < 50; i++) { // Number of potatoes
+            const potato = document.createElement('img');
+            potato.className = 'potato';
+            potato.src = '/assets/game/winner-2.png';
+            potato.alt = 'Potato';
+            potato.style.left = `${Math.random() * 100}vw`; // Random horizontal position
+            potato.style.animationDelay = `${Math.random() * 5}s`; // Random start time
+            potato.style.animationDuration = `${Math.random() * 3 + 2}s`; // Random duration
+
+            body.prepend(potato);
+        }
+    }
 
     function render() {
         if (roundNumber < things.length) {
@@ -47,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         render(isFinished);
         if (isFinished) {
           h2.innerHTML = "And the winner is..."
+          createPotatoShower();
         }
     };
 
