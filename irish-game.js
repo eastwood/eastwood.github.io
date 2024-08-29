@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     const things = [
-        "/assets/game/ireland.jpg",
         "/assets/game/brosnan.jpg",
         "/assets/game/fiddle.jpg",
         "/assets/game/jim.jpg",
@@ -76,12 +75,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let isReveal = true;
     window.onClickHandler = function (thing) {
         if (isReveal) {
+            h2.innerHTML = "Which is more Irish?";
             isReveal = false;
             const element = document.getElementsByClassName('reveal')[0]
             element.className = 'thing';
             element.getElementsByClassName('thing')[0].style = 'opacity: 1';
             return;
         }
+        h2.innerHTML = "Click the potato, to reveal the next contestant!";
         winner = thing;
         roundNumber += 1;
         const isFinished = roundNumber >= things.length;
