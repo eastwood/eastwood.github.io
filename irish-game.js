@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
     const things = [
         "/assets/game/ireland.jpg",
-        "/assets/game/beer.jpg",
         "/assets/game/brosnan.jpg",
-        "/assets/game/jim.jpg",
         "/assets/game/fiddle.jpg",
+        "/assets/game/jim.jpg",
         "/assets/game/potato.jpg",
         "/assets/game/graham.jpg",
+        "/assets/game/enya.jpg",
+        "/assets/game/hurling.jpg",
         "/assets/game/pub.jpg",
+        "/assets/game/beer.jpg",
         "/assets/game/brendan.jpg",
         "/assets/game/whiskey.jpg",
         "/assets/game/dance.jpg",
-        "/assets/game/hurling.jpg",
-        "/assets/game/enya.jpg"
     ];
 
     let winner = things[0];
@@ -26,22 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
         return thing.endsWith(".mp3");
     }
 
-    function createElement(thing) {
-        let element;
-        if (isAudio(thing)) {
-            const container = document.createElement('div');
-            container.className = 'audio-container';
-            element = document.createElement('audio');
-            element.src = thing;
-            element.controls = true; // Add controls for audio
-            element.className = 'thing'; // Add styling class
-            container.appendChild(element);
-            container.onclick = () => onClickHandler(thing);
-        } else {
-            element = document.createElement('img');
-            element.src = thing;
-            element.className = 'thing'; // Add styling class
-            element.onclick = () => onClickHandler(thing);
+    function createElement(thing, reveal) {
+        const element = document.createElement('img');
+        element.src = thing;
+        element.className = 'thing'; // Add styling class
+        element.onclick = () => onClickHandler(thing);
+        if (reveal) {
+            element.style = 'opacity: 0';
+            const revealElement = document.createElement('div');
+            revealElement.className = 'thing reveal';
+            revealElement.appendChild(element);
+            return revealElement;
+
         }
         return element;
     }
@@ -65,9 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function render(isFinished) {
         gameContainer.innerHTML = '';
         if (!isFinished) {
-            const elementA = createElement(winner);
-            const elementB = createElement(things[roundNumber]);
-
+            const elementA = createElement(winner, false);
+            const elementB = createElement(things[roundNumber], true);
             gameContainer.appendChild(elementA);
             gameContainer.appendChild(elementB);
         } else {
@@ -78,10 +73,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    window.onClickHandler = function(thing) {
+    let isReveal = true;
+    window.onClickHandler = function (thing) {
+        if (isReveal) {
+            isReveal = false;
+            const element = document.getElementsByClassName('reveal')[0]
+            element.className = 'thing';
+            element.getElementsByClassName('thing')[0].style = 'opacity: 1';
+            return;
+        }
         winner = thing;
         roundNumber += 1;
         const isFinished = roundNumber >= things.length;
+        isReveal = true;
         render(isFinished);
         if (isFinished) {
             h2.innerHTML = "And the winner is...";
