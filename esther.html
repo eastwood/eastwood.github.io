@@ -29,6 +29,10 @@
           object-fit: cover;
         }
       }
+      img:hover {
+        border: 3px solid green;
+        border-radius: 5px;
+      }
       @media (min-width: 768px) {
         /* md breakpoint */
         .thing {
@@ -86,10 +90,16 @@
           opacity: 1;
         }
       }
+
+      #audio {
+        display: block;
+        margin: 0 auto;
+      }
     </style>
   </head>
   <body>
-    <h1>Irish Game</h1>
+    <h1 class="text-center">Irish Game</h1>
+    <audio id="audio" src="./assets/game/music.mp3" controls loop></audio>
     <h2 class="text-center">Let's start, click the potato to begin!</h2>
     <div id="game"></div>
     <script src="./irish-game.js"></script>
