@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
             element.getElementsByClassName('thing')[0].style = 'opacity: 1';
             return;
         }
-        h2.innerHTML = "Click the potato, to reveal the next contestant!";
+        h2.innerHTML = "Reveal the next contestant!";
         winner = thing;
         roundNumber += 1;
         const isFinished = roundNumber >= things.length;
