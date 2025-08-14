@@ -1,4 +1,4 @@
-(function () {
+document.addEventListener("DOMContentLoaded", function () {
   const toggleButton = document.createElement("button");
   toggleButton.textContent = "🌙 Dark mode";
   toggleButton.className = "theme-toggle";
@@ -21,4 +21,4 @@
     toggleButton.textContent =
       newTheme === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
   });
-})();
+});
