@@ -1,3 +1,3 @@
 # -*- mode: org; -*-
 #+HTML_HEAD: <link rel="stylesheet" href="https://system2.io/assets/org/theme.css">
-#+HTML_HEAD: <script src="https://system2.io/assets/org/theme.js"></script>
+#+HTML_HEAD_EXTRA: <script src="https://system2.io/assets/org/theme.js"></script>
