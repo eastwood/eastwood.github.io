@@ -42,7 +42,7 @@ a:hover { text-decoration: underline; }
   border-radius: 4px;
   padding: var(--padding);
   margin: var(--margin);
-  box-shadow: 4px var(--shadow);
+  box-shadow: 0 2px 6px var(--shadow);
 }
 
 #table-of-contents h2 {
@@ -83,12 +83,13 @@ table {
   border-radius: 4px;
   overflow: hidden;
   border-collapse: unset;
-  border: none
+  border: none;
+  background-color: var(--code-bg);
 }
 
 th, td {
   padding: 0.75em 1em;
-  border-bottom: 1px solid var(--shadow);
+  border: 1px solid var(--shadow);
   text-align: left;
 }
 
