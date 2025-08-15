@@ -6,6 +6,9 @@
   --code-bg: #f6f8fa;
   --code-fg: #234;
   --shadow: #0002;
+  --margin: 2em;
+  --padding: 1em;
+  --radius: 4px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,8 +28,6 @@ body {
   background: var(--bg);
   color: var(--fg);
   font-family: system-ui, sans-serif;
-  margin: 0;
-  line-height: 1.6;
   transition: background .2s, color .2s;
 }
 
@@ -38,10 +39,10 @@ a:hover { text-decoration: underline; }
 
 #table-of-contents, .toc {
   background: var(--toc-bg);
-  border-radius: 7px;
-  padding: 1em;
-  margin: 2em 0;
-  box-shadow: 0 1px 3px var(--shadow);
+  border-radius: 4px;
+  padding: var(--padding);
+  margin: var(--margin);
+  box-shadow: 4px var(--shadow);
 }
 
 #table-of-contents h2 {
@@ -49,11 +50,8 @@ a:hover { text-decoration: underline; }
 }
 
 #table-of-contents ul, .toc ul {
-  margin: 0; padding-left: 1.2em;
+  padding-left: var(--padding);
   list-style: disc inside;
-}
-#table-of-contents li, .toc li {
-  margin: .3em 0;
 }
 
 pre, code {
@@ -63,30 +61,28 @@ pre, code {
 }
 pre {
   padding: .7em 1em;
-  border-radius: 6px;
+  border-radius: var(--radius);
   font-size: 1em;
   overflow-x: auto;
 }
 code {
   padding: .1em .4em;
-  border-radius: 4px;
+  border-radius: var(--radius);
   font-size: 0.97em;
 }
 
 h1, h2, h3, h4 {
-  margin-top: 2em;
-  margin-bottom: .5em;
+  margin-top: var(--margin);
   color: var(--accent);
   font-weight: 600;
 }
 
 table {
   width: 100%;
-  border-collapse: unset;
   margin: 2em 0;
-  box-shadow: 0 1px 6px var(--shadow);
   border-radius: 4px;
   overflow: hidden;
+  border-collapse: unset;
   border: none
 }
 
@@ -98,23 +94,9 @@ th, td {
 
 th {
   background: var(--accent);
-  color: #fff;
-  font-weight: 600;
+  color: var(--code-bg);
 }
 
 tr:last-child td {
   border-bottom: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  table {
-    background: var(--toc-bg);
-    box-shadow: 0 1px 6px var(--shadow);
-  }
-  th, td {
-    border-bottom: 1px solid var(--shadow);
-  }
-  th {
-    color: var(--code-bg);
-  }
 }
